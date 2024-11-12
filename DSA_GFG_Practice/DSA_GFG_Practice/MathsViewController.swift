@@ -63,6 +63,13 @@ class MathsViewController: UIViewController {
         }
         return res
     }
-    
+
+    func gcdOfTwoNumbers(first: Int, second: Int) -> Int {
+        if second == 0 {
+            return first
+        } else {
+            return gcdOfTwoNumbers(first: second, second: first % second)
+        }
+    }
 }
 
